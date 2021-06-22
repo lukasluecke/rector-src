@@ -119,14 +119,6 @@ final class NodeRepository
     }
 
     /**
-     * @return array<string, MethodCall[]|StaticCall[]>
-     */
-    public function findMethodCallsOnClass(string $className): array
-    {
-        return $this->callsByTypeAndMethod[$className] ?? [];
-    }
-
-    /**
      * @return StaticCall[]
      */
     public function findStaticCallsByClassMethod(ClassMethod $classMethod): array
